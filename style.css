@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0d0f24, #1c2248, #3d4ba3);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 380px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px 20px 35px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.image-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  border: 3px solid #00bcd4;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
+}
+
+.image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  background: linear-gradient(to right, #00bcd4, #a5f3fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subscribers {
+  font-size: 0.9rem;
+  color: #b0c4de;
+  margin-bottom: 15px;
+}
+
+.desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #e4e4e4;
+  margin-bottom: 20px;
+}
+
+.timer-container {
+  margin-bottom: 20px;
+}
+
+.timer-container p {
+  font-size: 0.9rem;
+  color: #b0c4de;
+}
+
+#timer {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #00ffc6;
+}
+
+#joinBtn {
+  background: linear-gradient(90deg, #00bcd4, #1de9b6);
+  border: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  animation: fadeButton 2s infinite alternate;
+}
+
+#joinBtn:hover {
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #1de9b6, #00bcd4);
+}
+
+
+@keyframes fadeButton {
+  from {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+  .desc {
+    font-size: 0.85rem;
+  }
+  #joinBtn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
